@@ -26,19 +26,19 @@ else
 
 Console.WriteLine("Введите трехзначное число: ");
 int threeDigitNumber = Math.Abs(Convert.ToInt32(Console.ReadLine()));
-if(CheckRange(threeDigitNumber))
-Console.WriteLine($"-> {SecondDigit(threeDigitNumber)}");
+if (CheckRange(threeDigitNumber))
+    Console.WriteLine($"-> {SecondDigit(threeDigitNumber)}");
 else Console.WriteLine("Введённое число не трехзначное. Введите трехзначное число.");
 
 
-bool CheckRange (int digit)
+bool CheckRange(int digit)
 {
     return digit > 99 && digit < 1000;
 }
 
 int SecondDigit(int num)
 {
-    return num / 10 % 10; 
+    return num / 10 % 10;
 }
 
 
