@@ -8,32 +8,30 @@
 
 // 1 способ
 
-Console.WriteLine("Введите номер дня недели");
-int numberDayOfWeek = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите номер дня недели");
+// int numberDayOfWeek = Convert.ToInt32(Console.ReadLine());
 
-if (numberDayOfWeek >= 1 && numberDayOfWeek <= 5)
-    Console.WriteLine("нет");
-else if (numberDayOfWeek >= 6 && numberDayOfWeek <= 7)
-    Console.WriteLine("да");
-else
-    Console.WriteLine("Введите правильную цифру дня недели от 1 до 7 включительно!");
+// if (numberDayOfWeek >= 1 && numberDayOfWeek <= 5)
+//     Console.WriteLine("нет");
+// else if (numberDayOfWeek >= 6 && numberDayOfWeek <= 7)
+//     Console.WriteLine("да");
+// else
+//     Console.WriteLine("Введите правильную цифру дня недели от 1 до 7 включительно!");
 
 
 // 2-й способ(с методом) 
 
 Console.WriteLine("Введите номер дня недели:");
 int numberOfWeekDay = Convert.ToInt32(Console.ReadLine());
-string result = CheckDay(numberOfWeekDay);
-Console.WriteLine(result);
+if (numberOfWeekDay >= 1 && numberOfWeekDay <=7)
+{ 
+if (CheckDay(numberOfWeekDay)) Console.WriteLine("да");
+else Console.WriteLine("нет");
+}
+else Console.WriteLine ("Введите правильную цифру дня недели от 1 до 7 включительно!");
 
-string CheckDay(int num)
-{
-    if (num >= 6 && num <= 7)
-        return "да";
-    else if (num >= 1 && num <= 5)
-        return "нет";
-    else
-        return "Введите правильную цифру дня недели от 1 до 7 включительно!";
-
+bool CheckDay(int num)
+{    
+        return num == 6 && num == 7;        
 }
 

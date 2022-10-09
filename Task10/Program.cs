@@ -8,16 +8,16 @@
 
 // 1  способ
 
-Console.WriteLine("Ведите трехзначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите трехзначное число: ");
+int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 
 if (number > 99 && number < 1000)
 {
-    Console.WriteLine((number / 10) % 10);
+    Console.WriteLine($" -> {Math.Abs(number / 10) % 10}");
 }
 else
 {
-    Console.WriteLine("Введённое число не трехзначное. Введите трехзначное число.");
+    Console.Write("Введённое число не трехзначное. Введите трехзначное число.");
 
 }
 
@@ -25,13 +25,20 @@ else
 // 2-й способ(метод)
 
 Console.WriteLine("Введите трехзначное число: ");
-int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(SecondDigit(threeDigitNumber));
+int threeDigitNumber = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+if(CheckRange(threeDigitNumber))
+Console.WriteLine($"-> {SecondDigit(threeDigitNumber)}");
+else Console.WriteLine("Введённое число не трехзначное. Введите трехзначное число.");
 
+
+bool CheckRange (int digit)
+{
+    return digit > 99 && digit < 1000;
+}
 
 int SecondDigit(int num)
 {
-    return num > 99 && num < 1000 ? (num / 10) % 10 : -1;  // -1 - в случае, если число вне диапазона
+    return num / 10 % 10; 
 }
 
 

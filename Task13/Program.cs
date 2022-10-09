@@ -10,7 +10,8 @@
 // 1 способ(без метода)
 
 Console.WriteLine("Введите число");
-int number = Convert.ToInt32(Console.ReadLine());
+int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+
 while (number > 999)
 {
     number = number / 10;
@@ -29,8 +30,12 @@ else
 // 2 способ (с методом)
 
 Console.WriteLine("Введите число");
-int number1 = Convert.ToInt32(Console.ReadLine());
+int number1 = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 int result = ThirdDigit(number1);
+if (number1 > 99) Console.WriteLine(result);
+else Console.WriteLine("Третьей цифры нет");
+
+
 
 int ThirdDigit(int num)
 {
@@ -38,13 +43,5 @@ int ThirdDigit(int num)
     {
         num = num / 10;
     }
-    if (num > 99 && num < 1000)
-    {
-        Console.WriteLine($" -> {num % 10}");
-    }
-    else
-    {
-        Console.WriteLine("Третьей цифры нет");
-    }
-    return num;
+    return num % 10;
 }
