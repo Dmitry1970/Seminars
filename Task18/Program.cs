@@ -11,31 +11,31 @@ Console.WriteLine(result);
 
 string Range(string number)
 {
-    if(number == "1") return "x > 0 && y > 0"; 
-    if(number == "2") return "x < 0 && y > 0"; 
-    if(number == "3") return "x < 0 && y < 0"; 
-    if(number == "4") return "x > 0 && y < 0"; 
+    if (number == "1") return "x > 0 && y > 0";
+    if (number == "2") return "x < 0 && y > 0";
+    if (number == "3") return "x < 0 && y < 0";
+    if (number == "4") return "x > 0 && y < 0";
     return "Ошибка ввода";
 }
 
 
-// 2 способ(switch)
+// 2 способ(switch - моя добавка)
 
 Console.WriteLine("Введите номер четверти координатной плоскости:");
 string num1 = Console.ReadLine();
 
-string res = DistanceBetweenDots (num1);
+string res = DistanceBetweenDots(num1);
 Console.WriteLine(result);
 
 string DistanceBetweenDots(string b)
 {
-    switch(b)
+    switch (b)
     {
-    case "1": return "x > 0 && y > 0";  
-    case "2": return "x < 0 && y > 0";
-    case "3": return "x > 0 && y < 0";    
-    case "4": return "x > 0 && y > 0";
-    default:  return "Ошибка ввода";    
+        case "1": return "x > 0 && y > 0";
+        case "2": return "x < 0 && y > 0";
+        case "3": return "x > 0 && y < 0";
+        case "4": return "x > 0 && y > 0";
+        default: return "Ошибка ввода";
     }
-} 
+}
 
