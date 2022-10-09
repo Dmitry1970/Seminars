@@ -15,8 +15,7 @@ void SquareDigit(int x)
     {
         Console.WriteLine($"|{index, 4}|{Math.Pow(index, 2), 4}|");
         index ++;
-    }
-    
+    }    
 }
 
 
