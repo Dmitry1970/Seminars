@@ -15,7 +15,6 @@ int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 while (number > 999)
 {
     number = number / 10;
-
 }
 if (number > 99 && number < 1000)
 {
@@ -25,7 +24,6 @@ else
 {
     Console.WriteLine("Третьей цифры нет");
 }
-
 
 // 2 способ (с методом)
 
