@@ -23,15 +23,15 @@
 
 Console.WriteLine("Введите номер дня недели:");
 int numberOfWeekDay = Convert.ToInt32(Console.ReadLine());
-if (numberOfWeekDay >= 1 && numberOfWeekDay <=7)
-{ 
-if (CheckDay(numberOfWeekDay)) Console.WriteLine("да");
-else Console.WriteLine("нет");
+if (numberOfWeekDay >= 1 && numberOfWeekDay <= 7)
+{
+    if (CheckDay(numberOfWeekDay)) Console.WriteLine("да");
+    else Console.WriteLine("нет");
 }
-else Console.WriteLine ("Введите правильную цифру дня недели от 1 до 7 включительно!");
+else Console.WriteLine("Введите правильную цифру дня недели от 1 до 7 включительно!");
 
 bool CheckDay(int num)
-{    
-        return num == 6 && num == 7;        
+{
+    return num == 6 && num == 7;
 }
 
