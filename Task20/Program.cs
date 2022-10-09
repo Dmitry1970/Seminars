@@ -28,8 +28,8 @@ Console.WriteLine(distance);
 
 double DistanceBetweenDots(int a1, int b1, int a2, int b2)
 {
-    double distance = Math.Sqrt(Math.Pow((a2-a1), 2) + Math.Pow((b2 - b1),2));
-return distance;
+    double distance = Math.Sqrt(Math.Pow((a2 - a1), 2) + Math.Pow((b2 - b1), 2));
+    return distance;
 }
 
 
