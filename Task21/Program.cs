@@ -21,7 +21,7 @@ Console.WriteLine("Z2: ");
 int z2 = Convert.ToInt32(Console.ReadLine());
 
 double distance = Math.Round(DistanceBetweenDots(x1, y1, z1, x2, y2, z2), 2, MidpointRounding.ToZero);
-Console.WriteLine(distance);
+Console.WriteLine($" -> {distance}");
 
 double DistanceBetweenDots(int xa, int ya, int za, int xb, int yb, int zb)
 {

@@ -19,6 +19,7 @@ int CountNumbers(int num)
     {
         num /= 10;
         count++;
+
     }
     return count;
 }

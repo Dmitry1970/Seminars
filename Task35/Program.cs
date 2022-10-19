@@ -46,7 +46,7 @@ void PrintArray(int[] array)
     }
 int[] myArray = CreateArrayRndInt(num, 0, 200);
 PrintArray(myArray);
-Console.WriteLine($"Кроличество элементов массива в диапазоне от 10 до 99 -> {SearchNum2(myArray)}");
+// Console.WriteLine($"Кроличество элементов массива в диапазоне от 10 до 99 -> {SearchNum2(myArray)}");
 
 // 2 способ(решение на семинаре)
 
