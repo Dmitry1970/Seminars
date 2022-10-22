@@ -20,31 +20,31 @@ int[] MyArray(int size, int min, int max)
     return array;
 }
 
-int[] CopyArray(int[] newArr)
-{
-    int[] myArray = new int[x];
-    for (int i = 0; i < myArray.Length; i++)
-    {
-        myArray[i] = newArr[i];
-    }
-    return myArray;
-}
-
-void PrintArray(int[] newArray)
+void PrintArray(int[] array)
 {
     Console.Write("[");
-    for (int i = 0; i < newArray.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        if (i < newArray.Length - 1)
+        if (i < array.Length - 1)
         {
-            Console.Write($"{newArray[i]}, ");
+            Console.Write($"{array[i]}, ");
         }
         else
         {
-            Console.Write($"{newArray[i]}");
+            Console.Write($"{array[i]}");
         }
     }
     Console.WriteLine("]");
+}
+
+int[] CopyArray(int[] array)
+{
+    int[] myArray = new int[array.Length];
+    for (int i = 0; i < myArray.Length; i++)
+    {
+        myArray[i] = array[i];
+    }
+    return myArray;
 }
 
 int[] arr = MyArray(x, 0, 100);
