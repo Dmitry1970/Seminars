@@ -75,4 +75,4 @@ PrintMatrix(myMatrix);
 Console.WriteLine();
 
 int x = SumOfElements2(myMatrix);
-Console.WriteLine(x);
+Console.WriteLine($"Сумма элементов на главной диагонали -> {x}");
