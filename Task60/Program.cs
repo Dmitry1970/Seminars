@@ -19,7 +19,6 @@ if (firstDim * secondDim * thirdDim > 99)
     return;
 }
 CreateThreeDimesionMatrix(firstDim, secondDim, thirdDim);
-int numbers = firstDim * secondDim * thirdDim;
 
 
 int[,,] CreateThreeDimesionMatrix(int row, int column, int depth)
